@@ -1,5 +1,6 @@
 site_name: Todo App Documentation
-# site_url: https://anithanarayanswamy.github.io/My-Documentation/
+site_url: https://anithanarayanswamy.github.io/My-Documentation/
+site_dir: site
 
 nav:
   - Home: index.md
