@@ -1,0 +1,10 @@
+site_name: Todo App Documentation
+
+nav:
+  - Home: index.md
+  - TODO APP: todo-app.md
+  - TEST: test.md
+    
+plugins:
+- search
+- mkdocstrings

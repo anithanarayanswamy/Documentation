@@ -1,0 +1,6 @@
+flask
+selenium
+altwalker
+webdriver_manager
+mkdocs
+mkdocstrings-python
