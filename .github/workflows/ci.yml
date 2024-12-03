@@ -24,18 +24,13 @@
 name: Build and deploy
 
 on:
-  # workflow_dispatch: # Allow manual triggers
+  workflow_dispatch: # Allow manual triggers
   push:
     branches:
       - main
       - master
-    #
-    # Trigger when either files in the docs folder,
-    # the requirements.txt file or the mkdocs.yml file
-    # are edited and commited.
     paths:
       - 'docs/**'
-      - 'requirements.txt'
       - 'mkdocs.yml'
 
 # These permissions are required for it to work
