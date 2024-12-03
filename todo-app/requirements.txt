@@ -1,4 +1,0 @@
-flask
-selenium
-altwalker
-webdriver_manager

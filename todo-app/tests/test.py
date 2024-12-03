@@ -5,6 +5,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 class TodoModel:
+    """ Todo Model """
     def __init__(self):
         self.driver = None
     

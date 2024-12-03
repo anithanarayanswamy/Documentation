@@ -7,10 +7,12 @@ todos = []
 
 @app.route('/')
 def index():
+    """ Method to render the index page """
     return render_template('index.html', todos=todos)
 
 @app.route('/add', methods=['POST'])
 def add_todo():
+    """ Method to add a new todo item """
     todo = request.form.get('todo')
     if todo:
         todos.append({'id': len(todos), 'text': todo, 'completed': False})
@@ -18,6 +20,7 @@ def add_todo():
 
 @app.route('/toggle/<int:todo_id>')
 def toggle_todo(todo_id):
+    """ Method to toggle the completion status of a todo item """
     for todo in todos:
         if todo['id'] == todo_id:
             todo['completed'] = not todo['completed']
@@ -26,6 +29,7 @@ def toggle_todo(todo_id):
 
 @app.route('/delete/<int:todo_id>')
 def delete_todo(todo_id):
+    """ Method to delete a todo item """
     global todos
     todos = [todo for todo in todos if todo['id'] != todo_id]
     return redirect(url_for('index'))
