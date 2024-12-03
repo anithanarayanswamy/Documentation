@@ -24,7 +24,6 @@
 name: Build and deploy
 
 on:
-  workflow_dispatch: # Allow manual triggers
   push:
     branches:
       - main
@@ -32,6 +31,7 @@ on:
     paths:
       - 'docs/**'
       - 'mkdocs.yml'
+  workflow_dispatch: # Allow manual triggers
 
 # These permissions are required for it to work
 permissions:
