@@ -24,7 +24,7 @@
 name: Build and deploy
 
 on:
-  workflow_dispatch: # Allow manual triggers
+  # workflow_dispatch: # Allow manual triggers
   push:
     tags-ignore:
       - '**' # Ignore any tags here
@@ -66,8 +66,8 @@ jobs:
         with:
           python_version: '3.x' # Uses latest 3.x version.
       - name: Install dependencies
-        # Alternatively: pip install mkdocs
-        run: pip install -r requirements.txt
+        # Alternatively: pip install mkdocs pip install -r requirements.txt
+        run: pip install mkdocs-material mkdocstrings-python
       - name: Build Docs
         run: mkdocs build
       - name: Configure GitHub Pages
