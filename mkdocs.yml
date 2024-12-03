@@ -3,7 +3,7 @@ site_url: https://anithanarayanswamy.github.io/My-Documentation/
 
 nav:
   - Home: index.md
-  - App: todo-app.md
+  - TodoApp: todo-app.md
   - Test: test.md
     
 plugins:
