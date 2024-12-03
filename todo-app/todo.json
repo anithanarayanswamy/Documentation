@@ -1,0 +1,61 @@
+{
+  "models": [
+    {
+      "name": "TodoModel",
+      "generator": "random(vertex_coverage(100))",
+      "startElementId": "v_start",
+      "vertices": [
+        {
+          "id": "v_start",
+          "name": "start_application"
+        },
+        {
+          "id": "v_empty",
+          "name": "verify_empty_state"
+        },
+        {
+          "id": "v_list",
+          "name": "verify_list_state"
+        }
+      ],
+      "edges": [
+        {
+          "id": "e_initialize",
+          "name": "initialize",
+          "sourceVertexId": "v_start",
+          "targetVertexId": "v_empty"
+        },
+        {
+          "id": "e_add_first",
+          "name": "add_todo",
+          "sourceVertexId": "v_empty",
+          "targetVertexId": "v_list"
+        },
+        {
+          "id": "e_add_more",
+          "name": "add_todo",
+          "sourceVertexId": "v_list",
+          "targetVertexId": "v_list"
+        },
+        {
+          "id": "e_toggle",
+          "name": "toggle_todo",
+          "sourceVertexId": "v_list",
+          "targetVertexId": "v_list"
+        },
+        {
+          "id": "e_delete",
+          "name": "delete_todo",
+          "sourceVertexId": "v_list",
+          "targetVertexId": "v_list"
+        },
+        {
+          "id": "e_delete_last",
+          "name": "delete_todo",
+          "sourceVertexId": "v_list",
+          "targetVertexId": "v_empty"
+        }
+      ]
+    }
+  ]
+}
