@@ -13,8 +13,8 @@ jobs:
       - uses: actions/checkout@v4
       - name: Configure Git Credentials
         run: |
-          git config anithanarayanswamy github-actions
-          git config anianitha125@gmail.com github-actions@github.com
+          git config anithanarayanswamy
+          git config anianitha125@gmail.com
       - uses: actions/setup-python@v4
         with:
           python-version: 3.x
